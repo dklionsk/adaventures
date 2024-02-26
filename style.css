@@ -1,58 +1,149 @@
-body {
+body, html {
+    height: 100%;
     margin: 0;
-    padding: 0;
     font-family: Arial, sans-serif;
+    color: #27282a;
+}
+
+h1 {
+    font-size: 3.5em;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+}
+
+p {
+    font-size: 1.25em;
+    line-height: 1.25;
+    color: rgba(39, 40, 42, 0.7);
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    height: 100vh;
+}
+
+.content-container {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    max-width: 70%;
+    margin: 0 auto;
+    flex-direction: row;
+}
+
+.text-content {
+    flex: 1;
+    text-align: left;
+    padding-right: 20px;
+}
+
+.app-store-badge {
+    margin-top: 20px;
+}
+
+.image-content {
+    flex: 1;
+    text-align: center;
+}
+
+.image-content img {
+    max-width: 100%;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.mobile-logo-container {
+    display: none;
+}
+
+.app-logo {
+    height: 60px;
+}
+
+.app-name {
+    align-items: center;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.mockup-image, .mockup-shadow {
+    max-width: 500px;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
 }
 
 a {
     text-decoration: none;
+    color: #27282a;
 }
 
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 90vh;
-    text-align: left;
+a:hover {
+    text-decoration: underline;
 }
 
-.app-presentation {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-}
-
-.app-info {
-    text-align: left;
-    margin-right: 30px;
-    max-width: 440px;
-    box-sizing: border-box;
-}
-
-.app-mockup {
-    position: relative;
-}
-
-.company-name {
-    font-size: 3em;
-    font-weight: bold;
+.footer a {
+    color: rgba(39, 40, 42, 0.5);
+    margin: 0 10px;
 }
 
 @media (max-width: 768px) {
-    .app-presentation {
-        flex-direction: column;
+    h1 {
+        font-size: 2.5em;
     }
 
-    .app-info {
-        margin: 0 auto;
-        padding: 0 20px;
-        width: auto;
+    .content-container {
+        flex-direction: column-reverse;
     }
 
-    .app-mockup img {
+    .text-content, .image-content {
         width: 100%;
-        height: auto;
-        margin: 20px auto;
+        flex: none;
+    }
+
+    .text-content {
+        padding-right: 0;
+    }
+
+    .logo-container {
+        display: none;
+    }
+
+    .mobile-logo-container {
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+
+    .app-logo {
+        height: 44px;
+    }
+
+    .app-name {
+        font-size: 1.5em;
+    }
+
+    .app-store-badge {
+        margin-top: 10px;
+    }
+
+    .mockup-image {
+        margin-bottom: 20px;
+    }
+
+    .mockup-shadow {
+        display: none;
     }
 }
