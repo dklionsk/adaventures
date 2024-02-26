@@ -17,6 +17,24 @@ p {
     color: rgba(39, 40, 42, 0.7);
 }
 
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
 .page-container {
     display: flex;
     flex-direction: column;
@@ -83,27 +101,28 @@ p {
     font-size: 0.9em;
 }
 
-a {
-    text-decoration: none;
-    color: #27282a;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
 .footer a {
     color: rgba(39, 40, 42, 0.5);
     margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
 }
 
 @media (max-width: 768px) {
     h1 {
-        font-size: 2.5em;
+        font-size: 2.25em;
+    }
+
+    p {
+        font-size: 1em;
     }
 
     .content-container {
         flex-direction: column-reverse;
+        max-width: 85%;
     }
 
     .text-content, .image-content {
@@ -124,6 +143,7 @@ a:hover {
         align-items: center;
         justify-content: left;
         gap: 10px;
+        margin-top: 20px;
         margin-bottom: 30px;
     }
 
@@ -137,10 +157,11 @@ a:hover {
 
     .app-store-badge {
         margin-top: 10px;
+        margin-bottom: 20px;
     }
 
     .mockup-image {
-        margin-bottom: 20px;
+        margin-bottom: 0px;
     }
 
     .mockup-shadow {
