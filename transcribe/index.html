@@ -12,7 +12,8 @@
             const url = form.url.value;
 
             const data = {
-                url: url
+                url: url,
+                emails: form.emails.value
             };
 
             try {
@@ -43,9 +44,9 @@
         <input type="url" id="url" name="url" required>
         <br><br>
 
-        <!-- <label for="emails">Emails:</label>
+        <label for="emails">Emails:</label>
         <input type="email" id="emails" name="emails" required multiple>
-        <br><br> -->
+        <br><br>
 
         <button type="submit">Submit</button>
     </form>
