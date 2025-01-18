@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transcribe</title>
+    <script>
+        async function handleSubmit(event) {
+            event.preventDefault();
+
+            const form = event.target;
+            const url = form.url.value;
+
+            const data = {
+                url: url
+            };
+
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data),
+                });
+
+                if (response.ok) {
+                    alert('Request submitted successfully!');
+                } else {
+                    alert('Failed to submit request.');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred while submitting the request.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Transcribe</h1>
+    <form action="https://jqxrivdwi5.execute-api.us-west-2.amazonaws.com/Production/jobs" method="POST" onsubmit="handleSubmit(event)">
+        <label for="url">URL:</label>
+        <input type="url" id="url" name="url" required>
+        <br><br>
+
+        <!-- <label for="emails">Emails:</label>
+        <input type="email" id="emails" name="emails" required multiple>
+        <br><br> -->
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
