@@ -9,10 +9,10 @@
             event.preventDefault();
 
             const form = event.target;
-            const url = form.url.value;
 
             const data = {
-                url: url,
+                url: form.url.value,
+                title: form.title.value,
                 emails: form.emails.value
             };
 
@@ -42,6 +42,10 @@
     <form action="https://jqxrivdwi5.execute-api.us-west-2.amazonaws.com/Production/jobs" method="POST" onsubmit="handleSubmit(event)">
         <label for="url">URL:</label>
         <input type="url" id="url" name="url" required>
+        <br><br>
+
+        <label for="url">Title:</label>
+        <input type="text" id="title" name="title">
         <br><br>
 
         <label for="emails">Emails:</label>
