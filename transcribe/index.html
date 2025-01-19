@@ -13,7 +13,8 @@
             const data = {
                 url: form.url.value,
                 title: form.title.value,
-                emails: form.emails.value
+                emails: form.emails.value,
+                summarize: form.summarize.checked,
             };
 
             try {
@@ -50,6 +51,10 @@
 
         <label for="emails">Emails:</label>
         <input type="email" id="emails" name="emails" required multiple>
+        <br><br>
+
+        <label for="summarize">Summarize:</label>
+        <input type="checkbox" id="summarize" name="summarize">
         <br><br>
 
         <button type="submit">Submit</button>
