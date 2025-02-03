@@ -12,6 +12,7 @@
 
             const data = {
                 url: form.url.value,
+                feed: form.feed.value,
                 title: form.title.value,
                 emails: form.emails.value,
                 summarize: form.summarize.checked,
@@ -45,7 +46,11 @@
         <input type="url" id="url" name="url" required>
         <br><br>
 
-        <label for="url">Title:</label>
+        <label for="feed">Podcast or channel:</label>
+        <input type="text" id="feed" name="feed">
+        <br><br>
+
+        <label for="title">Episode:</label>
         <input type="text" id="title" name="title">
         <br><br>
 
